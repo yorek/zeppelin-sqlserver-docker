@@ -1,5 +1,5 @@
 # Apache Zeppelin for SQL Server Docker Image
-This is the dockerized Apache Zeppelin with SQL Server and SQL Azure support, which source code is available here:
+This is the dockerized Apache Zeppelin with SQL Server and SQL Azure support, for which the source code is available here:
 
 https://github.com/yorek/incubator-zeppelin
 
