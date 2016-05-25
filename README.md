@@ -5,7 +5,7 @@ https://github.com/yorek/incubator-zeppelin
 
 ## Usage 
 
-After having installed your docker environment you can get the image using the docker command
+After having installed your docker environment you can get the image using the docker command (via docker shell)
 
     docker pull yorek/zeppelin-sqlserver
 
