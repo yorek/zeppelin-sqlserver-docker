@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y \
 	git \
 	curl \
 	openjdk-8-jdk \
+	nodejs \
 	npm \
 	libfontconfig \
 	maven
