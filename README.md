@@ -28,3 +28,5 @@ and you're done. If this is your first time using Apache Zeppelin, you have to c
 ## Notes
 
 With the current version of the Dockerfile, all notebook created in the container will be destroyed when the container is stopped. You can preserve your work exporting the Apache Zeppelin notebook.
+
+The scripts has been tested using the current Windows edition of [Docker](https://docs.docker.com/windows/): 1.11.1 
