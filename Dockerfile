@@ -23,7 +23,7 @@ ENV MAVEN_OPTS="-Xmx2g"
 
 RUN mvn clean package -DskipTests
 
-RUN cp ./conf/zeppelin-site.xml.template ./conf/zeppelin-site.xml \
+RUN cp ./conf/zeppelin-site.xml.template ./conf/zeppelin-site.xml && \
 	cp ./conf/zeppelin-env.sh.template ./conf/zeppelin-env.sh
 
 EXPOSE 8080
