@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
 	libfontconfig \
 	maven
 
-RUN git clone https://github.com/yorek/incubator-zeppelin.git zeppelin-sqlserver
+RUN git clone -b development https://github.com/yorek/incubator-zeppelin.git zeppelin-sqlserver
 
 RUN curl -L "https://download.microsoft.com/download/0/2/A/02AAE597-3865-456C-AE7F-613F99F850A8/sqljdbc_6.0.7130.100_enu.tar.gz" | tar xz
 
@@ -29,6 +29,3 @@ RUN cp ./conf/zeppelin-site.xml.template ./conf/zeppelin-site.xml && \
 EXPOSE 8080
 
 CMD ./bin/zeppelin.sh start
-
-
-
