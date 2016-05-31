@@ -3,19 +3,19 @@ This is the dockerized Apache Zeppelin with SQL Server and SQL Azure support, fo
 
 https://github.com/yorek/incubator-zeppelin
 
-This docker image is build using the "development" branch
+This docker image is build using the "development" branch, which contains the branch with the latest developments
 
 ## Usage
 
 After having installed your docker environment you can get the image using the docker command (via docker shell)
 
-    docker pull yorek/zeppelin-sqlserver
+    docker pull yorek/zeppelin-sqlserver:development
 
 once the image is downloaded you can run it using the docker command
 
-    docker run -p 8080:8080 --name zeppelin -d yorek/zeppelin-sqlserver
+    docker run -p 8080:8080 --name zeppelin -d yorek/zeppelin-sqlserver:development
 
-after that you can use a browser to connect to your docker machine ip address to use Zeppelin. If you don't know such ip address you can get it using the followin command
+after that you can use a browser to connect to your docker machine ip address to use Zeppelin. If you don't know such ip address you can get it using the following command
 
     docker-machine ip
 
