@@ -3,7 +3,9 @@ This is the dockerized Apache Zeppelin with SQL Server and SQL Azure support, fo
 
 https://github.com/yorek/incubator-zeppelin
 
-## Usage 
+This docker image is build using the "master" branch, which contains the branch with the latest STABLE features
+
+## Usage
 
 After having installed your docker environment you can get the image using the docker command (via docker shell)
 
@@ -21,7 +23,7 @@ you can then point your browser to
 
     http://<docker-machine ip>:8080
 
-and you're done. If this is your first time using Apache Zeppelin, you have to configure it to access to your SQL Server or SQL Azure instance. Read how to do so here: 
+and you're done. If this is your first time using Apache Zeppelin, you have to configure it to access to your SQL Server or SQL Azure instance. Read how to do so here:
 
  - [Using Zeppelin](https://github.com/yorek/incubator-zeppelin#using-zeppelin)
 
@@ -29,4 +31,4 @@ and you're done. If this is your first time using Apache Zeppelin, you have to c
 
 With the current version of the Dockerfile, all notebook created in the container will be destroyed when the container is stopped. You can preserve your work exporting the Apache Zeppelin notebook.
 
-The scripts has been tested using the current Windows edition of [Docker](https://docs.docker.com/windows/): 1.11.1 
+The scripts has been tested using the current Windows edition of [Docker](https://docs.docker.com/windows/): 1.11.1
