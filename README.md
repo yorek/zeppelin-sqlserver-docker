@@ -9,11 +9,11 @@ This docker image is built using the "branch-0.5.6" branch
 
 After having installed your docker environment you can get the image using the docker command (via docker shell)
 
-    docker pull yorek/zeppelin-sqlserver:development
+    docker pull yorek/zeppelin-sqlserver:branch-0.5.6
 
 once the image is downloaded you can run it using the docker command
 
-    docker run -p 8080:8080 --name zeppelin -d yorek/zeppelin-sqlserver:development
+    docker run -p 8080:8080 --name zeppelin -d yorek/zeppelin-sqlserver:branch-0.5.6
 
 after that you can use a browser to connect to your docker machine ip address to use Zeppelin. If you don't know such ip address you can get it using the following command
 
