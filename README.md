@@ -3,7 +3,7 @@ This is the dockerized Apache Zeppelin with SQL Server and SQL Azure support, fo
 
 https://github.com/yorek/incubator-zeppelin
 
-This docker image is build using the "development" branch, which contains the branch with the latest developments
+This docker image is built using the "branch-0.5.6" branch
 
 ## Usage
 
