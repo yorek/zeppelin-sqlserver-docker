@@ -1,3 +1,8 @@
+#
+# Apache Zeppelin for SQL Server
+# Version 0.5.6
+#
+
 FROM ubuntu:16.04
 
 MAINTAINER Davide Mauri <info@davidemauri.it>
