@@ -3,17 +3,17 @@ This is the dockerized Apache Zeppelin with SQL Server and SQL Azure support, fo
 
 https://github.com/yorek/incubator-zeppelin
 
-This docker image is built using the "v0.5.6" branch
+This docker image is built using the "v0.6.2" branch
 
 ## Usage
 
 After having installed your docker environment you can get the image using the docker command (via docker shell)
 
-    docker pull yorek/zeppelin-sqlserver:v0.5.6
+    docker pull yorek/zeppelin-sqlserver:v0.6.2
 
 once the image is downloaded you can run it using the docker command
 
-    docker run -p 8080:8080 --name zeppelin -d yorek/zeppelin-sqlserver:v0.5.6
+    docker run -p 8080:8080 --name zeppelin -d yorek/zeppelin-sqlserver:v0.6.2
 
 after that you can use a browser to connect to your docker machine ip address to use Zeppelin. If you don't know such ip address you can get it using the following command
 
