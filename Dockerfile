@@ -18,10 +18,6 @@ RUN apt-get update && apt-get install -y \
 
 RUN git clone -b v0.6.2 https://github.com/yorek/zeppelin.git zeppelin-sqlserver
 
-RUN curl -L "https://download.microsoft.com/download/0/2/A/02AAE597-3865-456C-AE7F-613F99F850A8/enu/sqljdbc_6.0.7728.100_enu.tar.gz" | tar xz
-
-RUN mvn install:install-file -Dfile=sqljdbc_6.0/enu/sqljdbc41.jar -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc41 -Dversion=4.1  -Dpackaging=jar -DgeneratePom=true
-
 WORKDIR zeppelin-sqlserver
 
 ENV MAVEN_OPTS="-Xmx2g"
