@@ -15,7 +15,12 @@ once the image is downloaded you can run it using the docker command
 
     docker run -p 8080:8080 --name zeppelin -d yorek/zeppelin-sqlserver:v0.6.2
 
-after that you can use a browser to connect to your docker machine ip address to use Zeppelin. If you don't know such ip address you can get it using the following command
+after that you can just connect to
+
+    http://localhost:8080
+
+using your browser to start to use Apache Zeppelin. If you are using the "old" [docker-machine](https://docs.docker.com/toolbox/overview/) instead of using the native docker engine for your OS, 
+you need to connect to the docker machine ip address instead of localhost. If you don't know such ip address you can get it using the following command
 
     docker-machine ip
 
@@ -25,10 +30,10 @@ you can then point your browser to
 
 and you're done. If this is your first time using Apache Zeppelin, you have to configure it to access to your SQL Server or SQL Azure instance. Read how to do so here:
 
- - [Using Zeppelin](https://github.com/yorek/incubator-zeppelin#using-zeppelin)
+ - [Using Zeppelin](https://github.com/yorek/zeppelin#using-zeppelin)
 
 ## Notes
 
 With the current version of the Dockerfile, all notebook created in the container will be destroyed when the container is stopped. You can preserve your work exporting the Apache Zeppelin notebook.
 
-The scripts has been tested using the current Windows edition of [Docker](https://docs.docker.com/windows/): 1.11.1
+The scripts has been tested using the current Windows edition of [Docker](https://docs.docker.com/windows/): 1.12.5
