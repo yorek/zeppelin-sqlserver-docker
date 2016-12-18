@@ -1,13 +1,13 @@
 # Apache Zeppelin for SQL Server Docker Image
 This is the dockerized Apache Zeppelin with SQL Server and SQL Azure support, for which the source code is available here:
 
-https://github.com/yorek/incubator-zeppelin
+https://github.com/yorek/zeppelin
 
 This docker image is built using the "v0.6.2" branch
 
 ## Usage
 
-After having installed your docker environment you can get the image using the docker command (via docker shell)
+After having installed your docker environment you can get the image using the docker command (via docker shell if using Docker Machine or PowerShell if using native Docker)
 
     docker pull yorek/zeppelin-sqlserver:v0.6.2
 
@@ -34,6 +34,16 @@ and you're done. If this is your first time using Apache Zeppelin, you have to c
 
 ## Notes
 
-With the current version of the Dockerfile, all notebook created in the container will be destroyed when the container is stopped. You can preserve your work exporting the Apache Zeppelin notebook.
+With the current version of the Dockerfile, all notebook created in the container will be destroyed when the container is stopped. 
+You can preserve your work exporting the Apache Zeppelin notebook or you can mount a volume when running Docker.
 
-The scripts has been tested using the current Windows edition of [Docker](https://docs.docker.com/windows/): 1.12.5
+Create a Zeppelin folder in your user home directory (usually c:/Users/<user>) and
+
+Using the Docker Machine 
+
+docker run -p 8080:8080 — name zeppelin -d -v /c/Users/<user>/Zeppelin:/zeppelin-sqlserver/notebook yorek/zeppelin-sqlserver:v0.6.2
+
+Using native Docker
+
+docker run -p 8080:8080 — name zeppelin -d -v c:/Users/<user>/Zeppelin:/zeppelin-sqlserver/notebook yorek/zeppelin-sqlserver:v0.6.2
+
