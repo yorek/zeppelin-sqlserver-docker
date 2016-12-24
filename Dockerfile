@@ -36,6 +36,8 @@ RUN mvn package -DskipTests
 RUN cp ./conf/zeppelin-site.xml.template ./conf/zeppelin-site.xml && \
 	cp ./conf/zeppelin-env.sh.template ./conf/zeppelin-env.sh
 
+VOLUME ["/zeppelin-sqlserver/notebook", "/zeppelin-sqlserver/conf"]
+
 EXPOSE 8080
 
 CMD ./bin/zeppelin.sh start
