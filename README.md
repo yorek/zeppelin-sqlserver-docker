@@ -41,9 +41,10 @@ Create a Zeppelin folder in your user home directory (usually c:/Users/<user>) a
 
 Using the Docker Machine 
 
-    docker run -p 8080:8080  --name zeppelin -d -v /c/Users/<user>/Zeppelin:/zeppelin-sqlserver/notebook yorek/zeppelin-sqlserver:v0.6.2
+    docker run --name zeppelin -p 8080:8080 -v /c/Users/<user>/Zeppelin:/zeppelin-sqlserver/notebook -d yorek/zeppelin-sqlserver:v0.6.2
 
 Using native Docker
 
-    docker run -p 8080:8080  -- name zeppelin -d -v c:/Users/<user>/Zeppelin:/zeppelin-sqlserver/notebook yorek/zeppelin-sqlserver:v0.6.2
+    docker run -- name zeppelin -p 8080:8080 -v c:/Users/<user>/Zeppelin:/zeppelin-sqlserver/notebook -d yorek/zeppelin-sqlserver:v0.6.2
 
+before runnig the above command, just make sure that the "c" drive is shared with Docker by checking the "Shared Drives" settings in the Docker tray icon.
