@@ -1,6 +1,6 @@
 #
-# Apache Zeppelin for SQL Server
-# Version 0.6.2
+# Apache Zeppelin for SQL Server Version 0.6.2
+# Dockerfile v 1.1
 #
 
 FROM ubuntu:16.04
@@ -30,6 +30,7 @@ RUN mvn clean package -DskipTests
 # and Apache Zeppeling is still using 1.1.9
 #
 RUN cp sqlserver/patch/ace-builds/src-noconflict/*sqlserver* zeppelin-web/bower_components/ace-builds/src-noconflict/
+
 RUN mvn package -DskipTests
 #
 
