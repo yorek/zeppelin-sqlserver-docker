@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
 	libfontconfig \
 	maven
 
-RUN git clone -b v0.7 https://github.com/yorek/zeppelin.git zeppelin-sqlserver
+RUN git clone -b master https://github.com/yorek/zeppelin.git zeppelin-sqlserver
 
 WORKDIR zeppelin-sqlserver
 

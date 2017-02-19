@@ -13,11 +13,11 @@ Dockerfile version: 1.1
 
 After having installed your docker environment you can get the image using the docker command (via docker shell if using Docker Machine or PowerShell if using native Docker)
 
-    docker pull yorek/zeppelin-sqlserver:v0.7
+    docker pull yorek/zeppelin-sqlserver:latest
 
 once the image is downloaded you can run it using the docker command
 
-    docker run --name zeppelin -p 8080:8080 -v /zeppelin-sqlserver/notebook -v /zeppelin-sqlserver/conf -d yorek/zeppelin-sqlserver:v0.7
+    docker run --name zeppelin -p 8080:8080 -v /zeppelin-sqlserver/notebook -v /zeppelin-sqlserver/conf -d yorek/zeppelin-sqlserver:latest
 
 after that you can just connect to
 
