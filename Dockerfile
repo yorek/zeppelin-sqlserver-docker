@@ -16,13 +16,13 @@ RUN apt-get update && apt-get install -y \
 	libfontconfig \
 	maven
 
-RUN git clone -b master https://github.com/yorek/zeppelin.git zeppelin-sqlserver
+RUN git clone https://github.com/yorek/zeppelin.git zeppelin-sqlserver
 
 WORKDIR zeppelin-sqlserver
 
 ENV MAVEN_OPTS="-Xmx2g"
 
-RUN mvn clean package -DskipTests
+RUN mvn package -DskipTests
 
 RUN cp ./conf/zeppelin-site.xml.template ./conf/zeppelin-site.xml && \
 	cp ./conf/zeppelin-env.sh.template ./conf/zeppelin-env.sh
