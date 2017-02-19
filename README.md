@@ -9,11 +9,15 @@ This docker image is built using the "v0.7" branch
 
 Dockerfile version: 1.1
 
+## Docker Hub
+
+Apache Zeppelin for SQL Server Docker image is available at the [Docker Hub](https://hub.docker.com/r/yorek/zeppelin-sqlserver/). 
+
 ## Usage
 
 After having installed your docker environment you can get the image using the docker command (via docker shell if using Docker Machine or PowerShell if using native Docker)
 
-    docker pull yorek/zeppelin-sqlserver:latest
+    docker pull yorek/zeppelin-sqlserver
 
 once the image is downloaded you can run it using the docker command
 
