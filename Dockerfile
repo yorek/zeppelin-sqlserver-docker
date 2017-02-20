@@ -1,6 +1,6 @@
 #
-# Apache Zeppelin for SQL Server Version 0.7
-# Dockerfile v 1.1
+# Apache Zeppelin for SQL Server Version
+# Dockerfile v 1.2
 #
 
 FROM ubuntu:16.04
@@ -15,6 +15,8 @@ RUN apt-get update && apt-get install -y \
 	npm \
 	libfontconfig \
 	maven
+
+RUN echo '{ "allow_root": true }' > /root/.bowerrc
 
 RUN git clone https://github.com/yorek/zeppelin.git zeppelin-sqlserver
 
