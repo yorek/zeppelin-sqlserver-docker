@@ -41,7 +41,45 @@ and you're done. If this is your first time using Apache Zeppelin, you have to c
 
 ## Update an existing Docker Image
 
-WIP
+Get updated image
+
+	docker pull yorek/zeppelin-sqlserver:v0.7
+
+Once it's downloaded, check if you have a running container
+
+	docker ps
+
+If you see an Apache Zeppelin container is running (it is named zeppelin if you followed my tutorials), stop it
+	
+	docker stop zeppelin
+
+Now create a new container pointing to the volumes of the previous version. The new container will automatically use the updated image
+
+	docker run -name zeppelin2 -p 8080:8080 -volumes-from zeppelin -d yorek/zeppelin-sqlserver:v0.7
+
+List again all the existing containers (running and not running)
+
+	docker ps -a
+
+Note that the old zeppelin container the is still there and if not needed can be removed
+
+	docker rm zeppelin
+
+The new container can now be renamed to the usual name
+
+	docker rename zeppelin2 zeppelin
+
+The old image can also be removed to free disk space
+	
+	docker rmi yorek/zeppelin-sqlserver:v0.6.2
+
+Now check that only one zeppelin container, with the version 0.7, is available:
+
+	docker ps
+
+Upgrade done! Now you can start Apache Zeppelin for SQL Server with the usual command:
+
+	docker start zeppelin
 
 ## Notes
 
