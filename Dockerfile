@@ -1,6 +1,6 @@
 #
 # Apache Zeppelin for SQL Server Version 0.7
-# Dockerfile v 1.1
+# Dockerfile v 1.2
 #
 
 FROM ubuntu:16.04
