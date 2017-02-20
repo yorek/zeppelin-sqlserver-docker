@@ -7,7 +7,7 @@ This docker image is built using the "v0.7" branch
 
 ## Version
 
-Dockerfile version: 1.1
+Dockerfile version: 1.2
 
 ## Usage
 
