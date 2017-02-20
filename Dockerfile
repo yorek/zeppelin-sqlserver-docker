@@ -16,6 +16,8 @@ RUN apt-get update && apt-get install -y \
 	libfontconfig \
 	maven
 
+RUN echo '{ "allow_root": true }' > /root/.bowerrc
+
 RUN git clone -b v0.7 https://github.com/yorek/zeppelin.git zeppelin-sqlserver
 
 WORKDIR zeppelin-sqlserver
