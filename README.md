@@ -3,7 +3,7 @@ This is the dockerized Apache Zeppelin with SQL Server and SQL Azure support, fo
 
 https://github.com/yorek/zeppelin
 
-This docker image is built using the "v0.7" branch
+This docker image is built using the "master" branch which contains the latest *stable* released version
 
 ## Version
 
@@ -43,7 +43,7 @@ and you're done. If this is your first time using Apache Zeppelin, you have to c
 
 Get updated image
 
-	docker pull yorek/zeppelin-sqlserver:v0.7
+	docker pull yorek/zeppelin-sqlserver:latest
 
 Once it's downloaded, check if you have a running container
 
@@ -55,7 +55,7 @@ If you see an Apache Zeppelin container is running (it is named zeppelin if you 
 
 Now create a new container pointing to the volumes of the previous version. The new container will automatically use the updated image
 
-	docker run -name zeppelin2 -p 8080:8080 -volumes-from zeppelin -d yorek/zeppelin-sqlserver:v0.7
+	docker run -name zeppelin2 -p 8080:8080 -volumes-from zeppelin -d yorek/zeppelin-sqlserver:latest
 
 List again all the existing containers (running and not running)
 
@@ -73,7 +73,7 @@ The old image can also be removed to free disk space
 	
 	docker rmi yorek/zeppelin-sqlserver:v0.6.2
 
-Now check that only one zeppelin container, with the version 0.7, is available:
+Now check that only one zeppelin container, with the latest version, is available:
 
 	docker ps
 
