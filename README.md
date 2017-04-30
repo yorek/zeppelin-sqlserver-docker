@@ -3,7 +3,7 @@ This is the dockerized Apache Zeppelin with SQL Server and SQL Azure support, fo
 
 https://github.com/yorek/zeppelin
 
-This docker image is built using the "branch-0.7" branch, which contains the latest *development* version.
+This docker image is built using the "v0.7.1" tag, which contains the latest *stable* 0.7 version.
 
 ## Version
 
@@ -13,11 +13,11 @@ Dockerfile version: 1.2
 
 After having installed your docker environment you can get the image using the docker command (via docker shell if using Docker Machine or PowerShell if using native Docker)
 
-    docker pull yorek/zeppelin-sqlserver:branch-0.7
+    docker pull yorek/zeppelin-sqlserver:v0.7.1
 
 once the image is downloaded you can run it using the docker command
 
-    docker run --name zeppelin -p 8080:8080 -v /zeppelin-sqlserver/notebook -v /zeppelin-sqlserver/conf -d yorek/zeppelin-sqlserver:branch-0.7
+    docker run --name zeppelin -p 8080:8080 -v /zeppelin-sqlserver/notebook -v /zeppelin-sqlserver/conf -d yorek/zeppelin-sqlserver:v0.7.1
 
 after that you can just connect to
 
@@ -39,7 +39,7 @@ and you're done. If this is your first time using Apache Zeppelin, you have to c
 
 Get updated image
 
-	docker pull yorek/zeppelin-sqlserver:branch-0.7
+	docker pull yorek/zeppelin-sqlserver:v0.7.1
 
 Once it's downloaded, check if you have a running container
 
@@ -51,7 +51,7 @@ If you see an Apache Zeppelin container is running (it is named zeppelin if you 
 
 Now create a new container pointing to the volumes of the previous version. The new container will automatically use the updated image
 
-	docker run -name zeppelin2 -p 8080:8080 -volumes-from zeppelin -d yorek/zeppelin-sqlserver:branch-0.7
+	docker run -name zeppelin2 -p 8080:8080 -volumes-from zeppelin -d yorek/zeppelin-sqlserver:v0.7.1
 
 List again all the existing containers (running and not running)
 
