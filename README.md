@@ -3,7 +3,7 @@ This is the dockerized Apache Zeppelin with SQL Server and SQL Azure support, fo
 
 https://github.com/yorek/zeppelin
 
-This docker image is built using the "branch-0.7" branch
+This docker image is built using the "branch-0.7" branch, which contains the latest *development* version.
 
 ## Version
 
@@ -51,7 +51,7 @@ If you see an Apache Zeppelin container is running (it is named zeppelin if you 
 
 Now create a new container pointing to the volumes of the previous version. The new container will automatically use the updated image
 
-	docker run -name zeppelin2 -p 8080:8080 -volumes-from zeppelin -d yorek/zeppelin-sqlserver:v0.7
+	docker run -name zeppelin2 -p 8080:8080 -volumes-from zeppelin -d yorek/zeppelin-sqlserver:branch-0.7
 
 List again all the existing containers (running and not running)
 
