@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN echo '{ "allow_root": true }' > /root/.bowerrc
 
-RUN git clone –depth 1 -b v0.7.1 https://github.com/yorek/zeppelin.git zeppelin-sqlserver
+RUN git clone –-depth 1 -b v0.7.1 https://github.com/yorek/zeppelin.git zeppelin-sqlserver
 
 WORKDIR zeppelin-sqlserver
 
